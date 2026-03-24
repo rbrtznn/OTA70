@@ -1,0 +1,303 @@
+/* ===== Base: keep light so readers can override fonts/sizes ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  /* hyphenation across engines */
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  hyphens: auto;
+
+  widows: 2;
+  orphans: 2;
+}
+
+a {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Headings / structural labels =====
+   Avoid awkward page breaks (legacy + modern)
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.book-title,
+.chapter-num,
+.section-heading {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  break-after: avoid-page;
+  break-inside: avoid-page;
+
+  margin: 1.2em 0 0.5em;
+}
+
+/* shared muted tone for subheads / numbers / notes */
+h2,
+h3,
+.chapter-num,
+.section-heading,
+.verse-num,
+.noteref,
+.inline-note {
+  color: #555555;
+}
+
+/* ===== Title (book-wide) ===== */
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em; /* scales with user font */
+  margin: 2em 0 1em;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 2em 0 1em;
+}
+
+/* ===== Table of Contents ===== */
+.toc {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.toc li {
+  margin: 0.25em 0;
+}
+
+.toc a {
+  text-decoration: underline;
+}
+
+/* ===== Book Titles (e.g., “Genesis”) ===== */
+.book-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 2em;
+}
+
+/* ===== Chapter Numbers ===== */
+.chapter-num {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+}
+
+/* ===== Section Headings (pericopes) ===== */
+.section-heading {
+  text-align: center;
+  font-size: 1.05em;
+  margin-top: 1em;
+  font-style: oblique;
+
+}
+
+/* ===== Body Text ===== */
+.p {
+  margin: 0.6em 0;
+  text-indent: 1em;
+}
+
+.p.noindent {
+  text-indent: 0;
+}
+
+/* first paragraph after any heading has no indent */
+h1 + .p,
+h2 + .p,
+h3 + .p,
+.section-heading + .p {
+  text-indent: 0;
+}
+
+/* ===== Poetry ===== */
+.poetry-first,
+.poetry-middle {
+  display: block !important;
+  line-height: 1.6 !important;
+  padding-right: 1em !important;
+  margin-left: 2em !important;
+  text-indent: -2em !important;
+  margin-bottom: 0.4em !important;
+  font-style: oblique;
+}
+
+/* extra top margin only for first line of a poem section */
+.poetry-first {
+  margin-top: 1.2em !important;
+}
+
+.poetry-middle {
+  margin-top: 0 !important;
+}
+
+.sign {
+  text-align: center;
+}
+
+/* ===== Block Quotes ===== */
+.quote {
+  margin: 0.8em 1em;
+  padding-left: 0.8em;
+  border-left: 0.12em solid #666;
+  text-indent: 0;
+
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+/* ===== Verse Numbers / Note refs (superscript) ===== */
+.verse-num,
+.noteref {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  text-decoration: none;
+  opacity: 0.7;
+  margin-right: 0.15em;
+  padding: 0 0.05em;
+}
+
+/* ===== Inline Notes (in-text footnotes, glosses) ===== */
+.inline-note {
+  font-size: 0.9em;
+  font-style: oblique;
+  padding: 0.1em 0.2em;
+  margin: 0 0.1em;
+}
+
+/* ===== Endnotes ===== */
+.endnotes {
+  margin-top: 2em;
+}
+
+.endnotes-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 1.2em 0 0.8em;
+}
+
+.endnotes ol {
+  list-style: decimal;
+  margin: 0 0 0 1.25em;
+  padding: 0;
+}
+
+.endnotes li {
+  margin: 0.5em 0;
+  page-break-inside: avoid;
+  break-inside: avoid-page;
+}
+
+.note-backref {
+  text-decoration: none;
+  opacity: 0.7;
+  margin-left: 0.25em;
+}
+
+/* ===== Page-break helpers ===== */
+.pagebreak-before {
+  page-break-before: always;
+  break-before: page;
+}
+
+.pagebreak-after {
+  page-break-after: always;
+  break-after: page;
+}
+
+/* ===== Title-Verso / Copyright Page ===== */
+.copyright.title-verso {
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin: 2em 1em;
+}
+
+.centerblock {
+  max-width: 24em;
+  margin: 0 auto;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.spacer {
+  margin: 1em 0;
+}
+
+.copyright.title-verso a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.copyright.title-verso strong {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+/* Table Utilities */
+.table-text {
+  margin: 0;
+  padding: 0.1em;
+  font-size: 0.9em;
+  text-indent: 0;
+}
+
+.table-header {
+  margin: 0;
+  padding: 0.2em;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.85em;
+  text-indent: 0;
+}
+
+/* Title Page & Dedication */
+.center-text {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+/* Cover Page */
+.cover-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.cover-image {
+  max-height: 100%;
+  max-width: 100%;
+}
