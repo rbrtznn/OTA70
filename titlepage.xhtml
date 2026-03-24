@@ -1,19 +1,83 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
-        
         <meta name="calibre:cover" content="true"/>
-        <title>Cover</title>
+        <title>Title Page</title>
         <style type="text/css" title="override_css">
-            @page {padding: 0pt; margin:0pt}
-            body { text-align: center; padding:0pt; margin: 0pt; }
+            @page { margin: 0; padding: 0; }
+            html, body { margin: 0; padding: 0; }
+            body {
+                background: #efe5d1;
+                color: #2f2418;
+                text-align: center;
+                font-family: Georgia, "Times New Roman", serif;
+            }
+            .page {
+                padding: 8% 8% 6%;
+            }
+            .panel {
+                background: #fbf7ee;
+                border: 1px solid #8f7658;
+                padding: 1.4em 1.2em 1.6em;
+            }
+            .series {
+                margin: 0 0 1.6em;
+                color: #7c5f42;
+                font-size: 0.72em;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+            h1 {
+                margin: 0;
+                font-size: 1.6em;
+                line-height: 1.2;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+            .rule {
+                width: 22%;
+                margin: 1.2em auto;
+                border-top: 1px solid #8f7658;
+            }
+            .author {
+                margin: 0 0 1.8em;
+                font-size: 0.9em;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            }
+            .cover-frame {
+                margin: 0 auto;
+                width: 76%;
+                padding: 0.35em;
+                border: 1px solid #8f7658;
+                background: #fffdf8;
+            }
+            .cover-frame img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border: 0;
+            }
+            .note {
+                margin: 1.4em 0 0;
+                font-size: 0.82em;
+                font-style: italic;
+                color: #5d4732;
+            }
         </style>
     </head>
     <body>
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 1240 1755" preserveAspectRatio="none">
-                <image width="1240" height="1755" xlink:href="cover.jpeg"/>
-            </svg>
+        <div class="page">
+            <div class="panel">
+                <p class="series">The Septuagint</p>
+                <h1>THE OLD TESTAMENT<br/>ACCORDING TO THE SEVENTY</h1>
+                <div class="rule"></div>
+                <p class="author">Michael Asser</p>
+                <div class="cover-frame">
+                    <img src="cover.jpeg" alt="Cover image for The Old Testament According to the Seventy"/>
+                </div>
+                <p class="note">An English version of the Septuagint</p>
+            </div>
         </div>
     </body>
 </html>
